@@ -17,15 +17,9 @@ commentButton.addEventListener('click', e => {
 
   contanier.appendChild(myComment);
 
-  
 
   input.value = "";
 })
-
-
-
-// when you submit without a comment it still submit
-
 
 
 resetButton.addEventListener('click', e=> [
