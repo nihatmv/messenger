@@ -3,18 +3,22 @@ const nihat = document.querySelector(".div-nihat");
 const input = document.querySelector(".input");
 
 commentButton.addEventListener('click', e => {
-  const newDiv = document.createElement("div");
+  let myImage = document.createElement("img");
+  myImage.src = "file:////Users/Mammadov/Desktop/ADA_Nihat/messenger/photoes/avatar4 copy.svg";
+  const myComment = document.createElement("div");
 
-  newDiv.innerHTML = input.value;
-  newDiv.classList.add("newDiv"); // Add the "newDiv" class to the new div
-  newDiv.style.width = '200px'
-  newDiv.style.height = '200px'
+  myImage.classList.add("myImage");
+  myComment.classList.add("myComment");
+  myComment.innerHTML = input.value;
 
+  const contanier = document.querySelector(".contanier");
 
-  const parent = document.querySelector(".contanier");
-  parent.appendChild(newDiv);
-
+  console.log(contanier);
+  contanier.appendChild(myComment);
+  myComment.appendChild(myImage);
 
   input.value = "";
 
 })
+
+// when you submit without a comment it still submit

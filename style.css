@@ -67,6 +67,13 @@ body {
 .comment-button:hover {
   background-color: #cc8800;
 }
-.newDiv {
-  background-color: red;
+.myComment {
+  margin-top: 20px;
+  background-color: lightgrey;
+  width: 420px;
+  height: 80px;
+  display: flex;
+}
+.myImage {
+  width: 50px;
 }
