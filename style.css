@@ -72,9 +72,7 @@ body {
 .comment-button:hover {
   background-color: #cc8800;
 }
-.comment-button:focus {
-  
-}
+
 .myComment {
   margin-top: 10px;
   background-color: #737373;
