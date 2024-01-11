@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(60, 60, 60);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +31,11 @@ body {
   margin-top: 10px;
   width: 300px;
   height: 30px;
+  padding-bottom: 20px;
+
+  transition: padding-bottom 400ms ease ;
+}
+.input:focus{
   padding-bottom: 90px;
 }
 ::placeholder {
@@ -67,13 +72,26 @@ body {
 .comment-button:hover {
   background-color: #cc8800;
 }
-.myComment {
-  margin-top: 20px;
-  background-color: lightgrey;
-  width: 420px;
-  height: 80px;
-  display: flex;
+.comment-button:focus {
+  
 }
+.myComment {
+  margin-top: 10px;
+  background-color: #737373;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  width: 250px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  padding-left: 5px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
 .myImage {
   width: 50px;
 }
