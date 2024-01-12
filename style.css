@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 700px;
-  /* margin-bottom: 500px; */
+  padding-top: 20px;
 }
 
 .contanier {
@@ -33,6 +33,9 @@ body {
   width: 300px;
   height: 30px;
   padding-bottom: 20px;
+  /* word-wrap: break-word; */
+  word-break: break-word;
+
 
   transition: padding-bottom 400ms ease ;
 }
@@ -81,7 +84,8 @@ body {
   border-width: 3px;
   border-color: white;
   width: 250px;
-  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -94,4 +98,27 @@ body {
 
 .myImage {
   width: 50px;
+}
+.deleteButton {
+  display: inline;
+  width: 60px;
+  height: 25px;
+  margin-left: 40px;
+  margin-top: 10px;
+  background-color: white;
+  color: red;
+  border: 2px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: background-color 390ms ease;
+}
+.deleteButton:hover {
+  background-color: #ffcccc;
+}
+.comments {
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
 }
