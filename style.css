@@ -4,6 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 700px;
+  /* margin-bottom: 500px; */
 }
 
 .contanier {
@@ -36,7 +37,7 @@ body {
   transition: padding-bottom 400ms ease ;
 }
 .input:focus{
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 ::placeholder {
   position: absolute;
