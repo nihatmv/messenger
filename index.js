@@ -68,14 +68,16 @@ input.addEventListener('keypress', e => {
   
   if (e.key === "Enter") {
 
+    console.log(e);
+
 
 
     if (noCharactersRegex.test(input.value)) {
-      // console.log(input.value);
       alert("You cannot send an empty message")
+      e.preventDefault()
+      input.value = "";    
       return
     } else {
-      console.log('hello');
 
       let myComment = document.createElement("div");
       let deleteButton = document.createElement("button");
@@ -96,8 +98,9 @@ input.addEventListener('keypress', e => {
       contanier.appendChild(comments);
       comments.appendChild(myComment);
       comments.appendChild(deleteButton);
-    
-      input.value = "";                           // if there is a gap, it can be submited !!!
+      
+      e.preventDefault()
+      input.value = "";
     
       paddingValue += 25
       document.body.style.paddingTop = paddingValue + "px";
@@ -110,14 +113,10 @@ input.addEventListener('keypress', e => {
           comments.remove();
         }
       
-    });
-        
+        });
     }
-
   }
 })
-
-
 
 resetButton.addEventListener('click', e=> [
   input.value = ""
