@@ -6,6 +6,7 @@ const contanier = document.querySelector(".contanier");
 
 let inputs = [];
 let outputs = [];
+let noCharactersRegex = /^\s*$/;
 
 
 let paddingValue = 20;
@@ -15,56 +16,13 @@ let myComment = document.createElement("div");
 
 commentButton.addEventListener('click', e => {
   
-  if (input.value === "") {
-    alert("You cannot send an emtpy message")
+  if (noCharactersRegex.test(input.value)) {
+    // console.log(input.value);
+    alert("You cannot send an empty message")
     return
-  }
+  } else {
+    console.log('hello');
 
-  let myComment = document.createElement("div");
-  let deleteButton = document.createElement("button");
-  let comments = document.createElement("div");
-  myComment.classList.add("myComment");
-  deleteButton.classList.add("deleteButton");
-  comments.classList.add("comments");
-
-  
-
-  myComment.innerHTML = input.value;
-  deleteButton.innerHTML = 'Delete'
-
-  inputs.push(input.value);
-  outputs.push(myComment.innerHTML);
-
-
-  contanier.appendChild(comments);
-  comments.appendChild(myComment);
-  comments.appendChild(deleteButton);
-
-  input.value = "";
-
-  paddingValue += 25
-  document.body.style.paddingTop = paddingValue + "px";
-  contanier.style.height = (contanier.clientHeight + 50) + "px";
-
-
-  deleteButton.addEventListener('click', e => {
-    if (inputs[0] === outputs[0]) {
-      comments.remove();
-    }
-  });
-
-})
-
-
-
-input.addEventListener('keypress', e => {
-  if (e.key === "Enter") {
-
-    if (input.value === "") {
-      alert("You cannot send an emtpy message")
-      return
-    }
-  
     let myComment = document.createElement("div");
     let deleteButton = document.createElement("button");
     let comments = document.createElement("div");
@@ -85,20 +43,76 @@ input.addEventListener('keypress', e => {
     comments.appendChild(myComment);
     comments.appendChild(deleteButton);
   
-    input.value = "";
+    input.value = "";                           // if there is a gap, it can be submited !!!
   
     paddingValue += 25
     document.body.style.paddingTop = paddingValue + "px";
     contanier.style.height = (contanier.clientHeight + 50) + "px";
+
   
   
     deleteButton.addEventListener('click', e => {
       if (inputs[0] === outputs[0]) {
         comments.remove();
       }
+    
+  });
+      
+  }
+
+})
+
+
+
+input.addEventListener('keypress', e => {
+  
+  if (e.key === "Enter") {
+
+
+
+    if (noCharactersRegex.test(input.value)) {
+      // console.log(input.value);
+      alert("You cannot send an empty message")
+      return
+    } else {
+      console.log('hello');
+
+      let myComment = document.createElement("div");
+      let deleteButton = document.createElement("button");
+      let comments = document.createElement("div");
+      myComment.classList.add("myComment");
+      deleteButton.classList.add("deleteButton");
+      comments.classList.add("comments");
+    
+      
+    
+      myComment.innerHTML = input.value;
+      deleteButton.innerHTML = 'Delete'
+    
+      inputs.push(input.value);
+      outputs.push(myComment.innerHTML);
+    
+    
+      contanier.appendChild(comments);
+      comments.appendChild(myComment);
+      comments.appendChild(deleteButton);
+    
+      input.value = "";                           // if there is a gap, it can be submited !!!
+    
+      paddingValue += 25
+      document.body.style.paddingTop = paddingValue + "px";
+      contanier.style.height = (contanier.clientHeight + 50) + "px";
+
+    
+    
+      deleteButton.addEventListener('click', e => {
+        if (inputs[0] === outputs[0]) {
+          comments.remove();
+        }
+      
     });
-
-
+        
+    }
 
   }
 })

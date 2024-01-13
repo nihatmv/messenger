@@ -30,18 +30,17 @@ body {
 }
 .input {
   margin-top: 10px;
-  width: 300px;
-  height: 30px;
+  width: 320px;
+  height: 70px;
   padding-bottom: 20px;
-  /* word-wrap: break-word; */
-  word-break: break-word;
-
+  resize: none;
+  outline: none;
 
   transition: padding-bottom 400ms ease ;
 }
-.input:focus{
+/* .input:focus{
   padding-bottom: 30px;
-}
+} */
 ::placeholder {
   position: absolute;
   top: 10px;
