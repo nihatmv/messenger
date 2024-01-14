@@ -13,11 +13,9 @@ let paddingValue = 20;
 let myComment = document.createElement("div");
 
 
-
 commentButton.addEventListener('click', e => {
   
   if (noCharactersRegex.test(input.value)) {
-    // console.log(input.value);
     alert("You cannot send an empty message")
     return
   } else {
@@ -30,7 +28,6 @@ commentButton.addEventListener('click', e => {
     deleteButton.classList.add("deleteButton");
     comments.classList.add("comments");
   
-    
   
     myComment.innerHTML = input.value;
     deleteButton.innerHTML = 'Delete'
@@ -43,7 +40,7 @@ commentButton.addEventListener('click', e => {
     comments.appendChild(myComment);
     comments.appendChild(deleteButton);
   
-    input.value = "";                           // if there is a gap, it can be submited !!!
+    input.value = "";
   
     paddingValue += 25
     document.body.style.paddingTop = paddingValue + "px";
@@ -63,18 +60,16 @@ commentButton.addEventListener('click', e => {
 })
 
 
-
 input.addEventListener('keypress', e => {
   
   if (e.key === "Enter") {
-
-    console.log(e);
 
 
 
     if (noCharactersRegex.test(input.value)) {
       alert("You cannot send an empty message")
       e.preventDefault()
+
       input.value = "";    
       return
     } else {
@@ -85,8 +80,6 @@ input.addEventListener('keypress', e => {
       myComment.classList.add("myComment");
       deleteButton.classList.add("deleteButton");
       comments.classList.add("comments");
-    
-      
     
       myComment.innerHTML = input.value;
       deleteButton.innerHTML = 'Delete'
