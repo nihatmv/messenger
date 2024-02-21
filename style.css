@@ -33,7 +33,7 @@ body {
   resize: none;
   outline: none;
 
-  transition: padding-bottom 400ms ease ;
+  transition: padding-bottom 400ms ease;
 }
 
 ::placeholder {
@@ -72,10 +72,8 @@ body {
 }
 .myComment {
   margin-top: 10px;
-  background-color: #737373;
-  border: solid;
-  border-width: 3px;
-  border-color: white;
+  background-color: #ffffff;
+  border: 2px solid black;
   width: 250px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -85,8 +83,8 @@ body {
   padding-left: 5px;
   border-radius: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  word-wrap:break-word;
+  color: black;
+  word-wrap: break-word;
   word-break: break-all;
 }
 
